@@ -6,7 +6,7 @@ const productSchema = new mongoose.Schema({
   productName: String,
   image: String,
   productDescription: String,
-
+  isFav: { type: Boolean, default: false },
   // Add a reference to the user who created the product
   createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
 });
